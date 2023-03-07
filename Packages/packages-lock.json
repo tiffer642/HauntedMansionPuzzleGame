@@ -51,9 +51,7 @@
     },
     "com.unity.2d.sprite": {
       "version": "1.0.0",
-
-      "depth": 1,
-
+      "depth": 0,
       "source": "builtin",
       "dependencies": {}
     },
@@ -71,9 +69,7 @@
     },
     "com.unity.2d.tilemap": {
       "version": "1.0.0",
-
-      "depth": 1,
-
+      "depth": 0,
       "source": "builtin",
       "dependencies": {}
     },
@@ -89,7 +85,6 @@
       },
       "url": "https://packages.unity.com"
     },
-
     "com.unity.ads": {
       "version": "3.7.5",
       "depth": 0,
@@ -108,7 +103,6 @@
       },
       "url": "https://packages.unity.com"
     },
-
     "com.unity.burst": {
       "version": "1.7.3",
       "depth": 1,
@@ -187,7 +181,6 @@
       "dependencies": {},
       "url": "https://packages.unity.com"
     },
-
     "com.unity.purchasing": {
       "version": "4.3.0",
       "depth": 0,
@@ -203,7 +196,6 @@
       },
       "url": "https://packages.unity.com"
     },
-
     "com.unity.render-pipelines.core": {
       "version": "12.1.7",
       "depth": 1,
@@ -232,7 +224,6 @@
       "dependencies": {},
       "url": "https://packages.unity.com"
     },
-
     "com.unity.services.analytics": {
       "version": "4.1.0",
       "depth": 1,
@@ -243,7 +234,6 @@
       },
       "url": "https://packages.unity.com"
     },
-
     "com.unity.services.core": {
       "version": "1.4.2",
       "depth": 1,
@@ -315,7 +305,6 @@
       },
       "url": "https://packages.unity.com"
     },
-
     "com.unity.xr.legacyinputhelpers": {
       "version": "2.1.9",
       "depth": 0,
@@ -326,7 +315,6 @@
       },
       "url": "https://packages.unity.com"
     },
-
     "com.unity.modules.ai": {
       "version": "1.0.0",
       "depth": 0,
