@@ -4,16 +4,15 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 public class ScenesManager : MonoBehaviour
 {
-    
-
-    // Methods
+    //Dont destroy on load of scene
     private void Awake()
     {
         DontDestroyOnLoad(this);
     }
 
-    //Methods
 
+
+    //Scene Changes
     public void LoadPast()
     {
         SceneManager.LoadScene("Past");
@@ -22,6 +21,20 @@ public class ScenesManager : MonoBehaviour
     public void LoadFuture()
     {
         SceneManager.LoadScene("Future");
+    }
+
+    public void LoadMainMenu()
+    {
+        SceneManager.LoadScene("Main Menu");
+        Destroy(gameObject);
+    }
+
+
+
+    //Quit Aplication-Game
+    public void Quit()
+    {
+        Application.Quit();
     }
 
 
