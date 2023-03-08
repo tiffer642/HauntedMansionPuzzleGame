@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 342fefb59be0b854cb509168c42ac2cb
+guid: 39240bbcbc2ff1f469c80861531f7d44
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -47,7 +47,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 160
+  spritePixelsToUnits: 100
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -128,13 +128,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: unnamed (7)_0
+      name: VictorianLadyStartRun_0
       rect:
         serializedVersion: 2
         x: 0
-        y: 160
-        width: 160
-        height: 160
+        y: 320
+        width: 320
+        height: 320
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -142,20 +142,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 356a8e8ed3d8cf84983fe72ec99fa91d
-      internalID: -802860013
+      spriteID: d4ae470b5701e864b9e3bd8c52a03694
+      internalID: 106385198
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: unnamed (7)_1
+      name: VictorianLadyStartRun_1
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 160
-        height: 160
+        width: 320
+        height: 320
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -163,8 +163,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: cdc637aab0d30a347b176e23e56b6d87
-      internalID: 490456834
+      spriteID: 0913def8bb048f240b6d56b82d605a6f
+      internalID: -590903039
       vertices: []
       indices: 
       edges: []
@@ -180,8 +180,8 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      unnamed (7)_0: -802860013
-      unnamed (7)_1: 490456834
+      VictorianLadyStartRun_1: -590903039
+      VictorianLadyStartRun_0: 106385198
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0
