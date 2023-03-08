@@ -528,6 +528,14 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
+    - target: {fileID: 389283544715048656, guid: 7c33483eecd3e2f4bba17831e2dd99fc, type: 3}
+      propertyPath: m_Type
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 389283544715048656, guid: 7c33483eecd3e2f4bba17831e2dd99fc, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: -935902869, guid: c811d55f595e2fa439a29150564db9ae, type: 3}
     - target: {fileID: 389283545238370891, guid: 7c33483eecd3e2f4bba17831e2dd99fc, type: 3}
       propertyPath: m_RootOrder
       value: 0
@@ -578,6 +586,25 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7c33483eecd3e2f4bba17831e2dd99fc, type: 3}
+--- !u!1 &389283544582555548 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 389283544715048659, guid: 7c33483eecd3e2f4bba17831e2dd99fc, type: 3}
+  m_PrefabInstance: {fileID: 389283544582555547}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &389283544582555549
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 389283544582555548}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 305ef004e893cb54ca51fb5f78ec3f0d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Past: {fileID: -935902869, guid: c811d55f595e2fa439a29150564db9ae, type: 3}
+  Future: {fileID: -458497214, guid: c811d55f595e2fa439a29150564db9ae, type: 3}
 --- !u!1001 &8586794791408135385
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -589,6 +616,14 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 574908434}
+    - target: {fileID: 8586794791471165320, guid: 71a769f66b3a234468fdb106098a7f31, type: 3}
+      propertyPath: m_Type
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8586794791471165320, guid: 71a769f66b3a234468fdb106098a7f31, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: -935902869, guid: c811d55f595e2fa439a29150564db9ae, type: 3}
     - target: {fileID: 8586794791649150632, guid: 71a769f66b3a234468fdb106098a7f31, type: 3}
       propertyPath: m_RootOrder
       value: 2
