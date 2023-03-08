@@ -4,11 +4,8 @@
 TagManager:
   serializedVersion: 2
   tags:
-
-  - UI
   - Breakable
-  - TimeChange Zone
-
+  - OBJ
   layers:
   - Default
   - TransparentFX
@@ -16,7 +13,7 @@ TagManager:
   - 
   - Water
   - UI
-  - UI_2
+  - 
   - 
   - 
   - 
