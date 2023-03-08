@@ -6,12 +6,15 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
+    path: Assets/ChristopherBrown/Scenes/MainRoom.unity
+    guid: b09fcfd4a9837944e8a7197e03103a0c
+  - enabled: 0
     path: Assets/Scenes/Main Menu.unity
     guid: f63c4ced9f67e75478c1a37c75f2207b
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/Past.unity
     guid: 9f8ba17b4b4041c409ff01281b5182b8
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/Future.unity
     guid: bbd829ba431dd9e40944c022e8744c5b
   m_configObjects: {}
