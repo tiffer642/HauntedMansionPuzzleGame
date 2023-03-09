@@ -15,7 +15,8 @@ public class ScenesManager : MonoBehaviour
     //Scene Changes
     public void LoadPast()
     {
-        SceneManager.LoadScene("Past");
+        //SceneManager.LoadScene("Past");
+        SceneManager.LoadScene("Scene level 1 iteration 1");
     }
 
     public void LoadFuture()

@@ -22,6 +22,14 @@ public class MoveableObj : MonoBehaviour
     public GameObject Player;
     private Rigidbody2D RB;
 
+
+    private void Awake()
+    {
+        DontDestroyOnLoad(this);
+    }
+
+
+
     private void Start()
     {
         Player = GameObject.Find("Player");
@@ -40,7 +48,10 @@ public class MoveableObj : MonoBehaviour
             SR.sprite = Future;
         }
 
-
+        if(Player == null)
+        {
+            Player = GameObject.Find("Player");
+        }
     }
 
     public void UpdatePastLocation()
