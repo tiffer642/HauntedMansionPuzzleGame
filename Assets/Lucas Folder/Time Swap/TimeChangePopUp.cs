@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using TMPro;
 
 
 public class TimeChangePopUp : MonoBehaviour
@@ -15,14 +16,26 @@ public class TimeChangePopUp : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        InteractPopup = GameObject.Find("Interact Popup");
+        InteractPopup = GameObject.Find("TimeChange PopUp");
         SCM = GameObject.Find("Scene Manager").GetComponent<ScenesManager>();
     }
 
     // Update is called once per frame
     void Update()
     {
-        
+        if(InteractPopup.gameObject.activeSelf == true)
+        {
+            if (Input.GetKey(KeyCode.E) && SceneManager.GetActiveScene().name != "Past")
+            {
+                SCM.LoadPast();
+                Debug.Log("Past");
+            }
+            else if (Input.GetKey(KeyCode.E) && SceneManager.GetActiveScene().name != "Future")
+            {
+                SCM.LoadFuture();
+                Debug.Log("Future");
+            }
+        }
     }
 
 
@@ -31,30 +44,21 @@ public class TimeChangePopUp : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("Player"))
         {
-            InteractPopup.SetActive(true);
+            InteractPopup.gameObject.SetActive(true);
         }
-        else
+
+    }
+
+
+    private void OnTriggerExit2D(Collider2D collision)
+    {
+        if (collision.gameObject.CompareTag("Player"))
         {
-            if(InteractPopup.activeSelf == true)
+            if (InteractPopup.gameObject.activeSelf == true)
             {
-                InteractPopup.SetActive(true);
-            }
-
-        }
-
-
-        if (collision.gameObject.CompareTag("Player") && InteractPopup.activeSelf == true)
-        {
-            if (Input.GetKey(KeyCode.E) && SceneManager.GetActiveScene().name != "Past")
-            {
-                SCM.LoadPast();
-            }
-            else if(Input.GetKey(KeyCode.E) && SceneManager.GetActiveScene().name != "Future")
-            {
-                SCM.LoadFuture();
+                InteractPopup.gameObject.SetActive(true);
             }
         }
-
     }
 
 }

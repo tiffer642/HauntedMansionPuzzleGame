@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 6258929457187801832}
   - component: {fileID: 1533909092607241635}
   - component: {fileID: 7028532430469264594}
-  - component: {fileID: 7147205652673832415}
+  - component: {fileID: 2712713644126068994}
   m_Layer: 0
   m_Name: Breakable Object
   m_TagString: Breakable
@@ -107,7 +107,7 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 1
   m_Constraints: 4
---- !u!114 &7147205652673832415
+--- !u!114 &2712713644126068994
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -116,9 +116,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 4997094024862947212}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 48912c239d0502e4798dc0cbee93e3fd, type: 3}
+  m_Script: {fileID: 11500000, guid: 455be6b54827c2f4497a6dd580383513, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Broken: {fileID: 0}
-  Old: {fileID: 0}
-  New: {fileID: 0}
+  BrokenSprite: {fileID: 0}
+  Past: {fileID: 0}
+  Future: {fileID: 0}
+  Broken: 0

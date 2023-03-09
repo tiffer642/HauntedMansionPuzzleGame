@@ -6,12 +6,15 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Scenes/Main Menu.unity
+    path: Assets/Main Scenes/Main Menu.unity
     guid: f63c4ced9f67e75478c1a37c75f2207b
   - enabled: 1
-    path: Assets/Scenes/Past.unity
+    path: Assets/Main Scenes/Past.unity
     guid: 9f8ba17b4b4041c409ff01281b5182b8
   - enabled: 1
-    path: Assets/Scenes/Future.unity
+    path: Assets/Main Scenes/Future.unity
     guid: bbd829ba431dd9e40944c022e8744c5b
+  - enabled: 1
+    path: Assets/Lucas Folder/Scene/Scene level 1 iteration 1.unity
+    guid: 730e1f850d4ab094b84ac19e6d736025
   m_configObjects: {}
