@@ -4,8 +4,11 @@
 TagManager:
   serializedVersion: 2
   tags:
+
+  - UI
   - Breakable
   - OBJ
+
   layers:
   - Default
   - TransparentFX
@@ -13,11 +16,15 @@ TagManager:
   - 
   - Water
   - UI
+
+
+  - 
+
   - 
   - 
   - 
   - 
-  - 
+  - mapDisplay
   - 
   - 
   - 
