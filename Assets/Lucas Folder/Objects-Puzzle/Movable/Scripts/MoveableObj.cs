@@ -39,6 +39,7 @@ public class MoveableObj : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        
         if(SceneManager.GetActiveScene().name == "Past" && SR.sprite != Past)
         {
             SR.sprite = Past;
@@ -96,6 +97,7 @@ public class MoveableObj : MonoBehaviour
             {
                 transform.parent = null;
                 RB.isKinematic = false;
+                DontDestroyOnLoad(this);
             }
             
         }

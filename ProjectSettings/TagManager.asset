@@ -8,7 +8,7 @@ TagManager:
   - UI
   - TimeChange Zone
   - Breakable
-  - BreakEvent
+
   layers:
   - Default
   - TransparentFX
