@@ -9,6 +9,9 @@ public class PlayerTopDown : MonoBehaviour
     public Animator an;
     public SpriteRenderer sr;
 
+    public AudioClip walkS;
+    public AudioSource As;
+
     float horizontal;
     float vertical;
     float moveLimiter = 0.7f;
@@ -22,6 +25,7 @@ public class PlayerTopDown : MonoBehaviour
         rb = GetComponent<Rigidbody2D>();
         an = GetComponent<Animator>();
         sr = GetComponent<SpriteRenderer>();
+        As = GetComponent<AudioSource>();
         randomNum = Random.Range(0, 10);
     }
 
@@ -70,5 +74,11 @@ public class PlayerTopDown : MonoBehaviour
         }
        
         rb.velocity = new Vector2(horizontal * runSpeed, vertical * runSpeed);
+    }
+
+    public void PlayWalkSound()
+    {
+        As.Stop();
+        As.PlayOneShot(walkS);
     }
 }
