@@ -102,13 +102,13 @@ public class ScenesManager : MonoBehaviour
             if(SceneManager.GetActiveScene().name == "Future")
             {
                 LoadPast();
-                //InteractCanvas.SetActive(false);
+                InteractCanvas.SetActive(false);
                 Debug.Log("Past");
             }
             else if(SceneManager.GetActiveScene().name == "Past")
             {
                 LoadFuture();
-                //InteractCanvas.SetActive(false);
+                InteractCanvas.SetActive(false);
                 Debug.Log("Future");
             }
         }

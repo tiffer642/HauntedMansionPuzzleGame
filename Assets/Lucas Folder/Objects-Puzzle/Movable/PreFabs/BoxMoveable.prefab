@@ -97,7 +97,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Past: {fileID: 21300000, guid: 09028371b299de0499a98e2b79609a4e, type: 3}
-  Future: {fileID: 0}
+  Future: {fileID: 21300000, guid: f8b469509ba3aad469a26f0dc4262f20, type: 3}
   PastLocation: {x: 0, y: 0, z: 0}
   PresentLocation: {x: 0, y: 0, z: 0}
   Player: {fileID: 0}
