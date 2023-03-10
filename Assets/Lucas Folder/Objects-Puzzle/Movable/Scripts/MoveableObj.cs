@@ -5,6 +5,13 @@ using UnityEngine.SceneManagement;
 
 public class MoveableObj : MonoBehaviour
 {
+    private void Awake()
+    {
+        DontDestroyOnLoad(this);
+    }
+
+
+
     //Sprite Renderer
     private SpriteRenderer SR;
 
@@ -23,10 +30,8 @@ public class MoveableObj : MonoBehaviour
     private Rigidbody2D RB;
 
 
-    private void Awake()
-    {
-        DontDestroyOnLoad(this);
-    }
+    //Time swap
+    public bool InPast = false;
 
 
 
@@ -39,13 +44,15 @@ public class MoveableObj : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        //Change Sprite From Scene
         if(SceneManager.GetActiveScene().name == "Past" && SR.sprite != Past)
         {
+            //Change Sprite to Past Sprite
             SR.sprite = Past;
         }
         else if(SceneManager.GetActiveScene().name == "Future" && SR.sprite != Future)
         {
+            //Change Sprite to Present Sprite
             SR.sprite = Future;
         }
 
@@ -53,21 +60,34 @@ public class MoveableObj : MonoBehaviour
         {
             Player = GameObject.Find("Player");
         }
-    }
 
+
+       // UpdatePastLocation();
+        UpdatePresentLocation();
+        //move to past location when time changed
+        if(SceneManager.GetActiveScene().name == "Past" && InPast == false)
+        {
+            InPast = true;
+            TimeChange();
+            
+        }
+    }
+    
     public void UpdatePastLocation()
     {
-        if (SceneManager.GetActiveScene().name == "Past")
-        {
             PastLocation = transform.position;
-        }
     }
 
     public void UpdatePresentLocation()
     {
         if (SceneManager.GetActiveScene().name == "Future")
         {
+            if(InPast == true)
+            {
+                UpdatePastLocation();
+            }
             PresentLocation = transform.position;
+            InPast = false;
         }
     }
     
@@ -76,14 +96,13 @@ public class MoveableObj : MonoBehaviour
     {
         if (SceneManager.GetActiveScene().name == "Past")
         {
+            Debug.Log(PastLocation);
             transform.position = PastLocation;
         }
-      /*  else if (SceneManager.GetActiveScene().name == "Future")
-        {
-            transform.position = PresentLocation;
-        }*/
     }
 
+
+    //Grabed by Player
     private void OnTriggerStay2D(Collider2D collision)
     {
         if (collision.gameObject.CompareTag("Player"))
