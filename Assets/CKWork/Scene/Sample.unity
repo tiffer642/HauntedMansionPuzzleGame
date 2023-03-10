@@ -544,8 +544,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   SR: {fileID: 794795722}
-  OpenSprite: {fileID: 0}
-  ClosedSprite: {fileID: 0}
+  OpenSprite: {fileID: -126307625, guid: 80bf40e385e33904aabc69a448ec0aa2, type: 3}
+  ClosedSprite: {fileID: -891131386, guid: 80bf40e385e33904aabc69a448ec0aa2, type: 3}
   isOpen: 0
 --- !u!1 &1596468253
 GameObject:
