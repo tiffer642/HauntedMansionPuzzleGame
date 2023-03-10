@@ -2782,6 +2782,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: -6277475715411879977, guid: d9afabec1a972f34a97c9b9b5eb59900, type: 3}
+      propertyPath: m_SortingOrder
+      value: 4
+      objectReference: {fileID: 0}
     - target: {fileID: 5206725367993632636, guid: d9afabec1a972f34a97c9b9b5eb59900, type: 3}
       propertyPath: m_Name
       value: TimeSwap zone
@@ -2792,11 +2796,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5206725367993632642, guid: d9afabec1a972f34a97c9b9b5eb59900, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -0.01
+      value: -1.05
       objectReference: {fileID: 0}
     - target: {fileID: 5206725367993632642, guid: d9afabec1a972f34a97c9b9b5eb59900, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -3
+      value: -1
       objectReference: {fileID: 0}
     - target: {fileID: 5206725367993632642, guid: d9afabec1a972f34a97c9b9b5eb59900, type: 3}
       propertyPath: m_LocalPosition.z

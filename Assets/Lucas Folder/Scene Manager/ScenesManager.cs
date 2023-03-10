@@ -15,8 +15,7 @@ public class ScenesManager : MonoBehaviour
     //Scene Changes
     public void LoadPast()
     {
-        //SceneManager.LoadScene("Past");
-        SceneManager.LoadScene("Scene level 1 iteration 1");
+        SceneManager.LoadScene("Past");
     }
 
     public void LoadFuture()
@@ -73,5 +72,48 @@ public class ScenesManager : MonoBehaviour
     public void Update()
     {
         Pause();
+        SwapTime();
     }
+
+
+
+    //Interact Popup
+    public GameObject InteractCanvas;
+
+    public void IntPopup(bool onOff)
+    {
+        if(InteractCanvas.gameObject.activeSelf == false  && onOff == true)
+        {
+            InteractCanvas.SetActive(true);
+        }
+        else
+        {
+            if(InteractCanvas.gameObject.activeSelf == true && onOff == false)
+            {
+                InteractCanvas.SetActive(false);
+            }
+        }
+    }
+
+    public void SwapTime()
+    {
+        if (Input.GetKeyDown(KeyCode.E) && InteractCanvas.activeSelf == true)
+        {
+            if(SceneManager.GetActiveScene().name == "Future")
+            {
+                LoadPast();
+                //InteractCanvas.SetActive(false);
+                Debug.Log("Past");
+            }
+            else if(SceneManager.GetActiveScene().name == "Past")
+            {
+                LoadFuture();
+                //InteractCanvas.SetActive(false);
+                Debug.Log("Future");
+            }
+        }
+    }
+
+
+
 }
