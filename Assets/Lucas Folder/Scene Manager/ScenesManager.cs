@@ -15,12 +15,12 @@ public class ScenesManager : MonoBehaviour
     //Scene Changes
     public void LoadPast()
     {
-        SceneManager.LoadScene("Past 1");
+        SceneManager.LoadScene("Past");
     }
 
     public void LoadFuture()
     {
-        SceneManager.LoadScene("Future 1");
+        SceneManager.LoadScene("Future");
     }
 
     public void LoadMainMenu()
@@ -99,13 +99,13 @@ public class ScenesManager : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.E) && InteractCanvas.activeSelf == true)
         {
-            if(SceneManager.GetActiveScene().name == "Future 1")
+            if(SceneManager.GetActiveScene().name == "Future")
             {
                 LoadPast();
                 //InteractCanvas.SetActive(false);
                 Debug.Log("Past");
             }
-            else if(SceneManager.GetActiveScene().name == "Past 1")
+            else if(SceneManager.GetActiveScene().name == "Past")
             {
                 LoadFuture();
                 //InteractCanvas.SetActive(false);

@@ -65,7 +65,7 @@ public class MoveableObj : MonoBehaviour
        // UpdatePastLocation();
         UpdatePresentLocation();
         //move to past location when time changed
-        if(SceneManager.GetActiveScene().name == "Past 1" && InPast == false)
+        if(SceneManager.GetActiveScene().name == "Past" && InPast == false)
         {
             InPast = true;
             TimeChange();
@@ -80,7 +80,7 @@ public class MoveableObj : MonoBehaviour
 
     public void UpdatePresentLocation()
     {
-        if (SceneManager.GetActiveScene().name == "Future 1")
+        if (SceneManager.GetActiveScene().name == "Future")
         {
             if(InPast == true)
             {
@@ -94,15 +94,11 @@ public class MoveableObj : MonoBehaviour
 
     public void TimeChange()
     {
-        if (SceneManager.GetActiveScene().name == "Past 1")
+        if (SceneManager.GetActiveScene().name == "Past")
         {
             Debug.Log(PastLocation);
             transform.position = PastLocation;
         }
-      /*  else if (SceneManager.GetActiveScene().name == "Future")
-        {
-            transform.position = PresentLocation;
-        }*/
     }
 
 
