@@ -3,7 +3,16 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
+
   tags: []
+=======
+  tags:
+  - OBJ
+  - UI
+  - TimeChange Zone
+  - Breakable
+
+
   layers:
   - Default
   - TransparentFX
@@ -40,4 +49,7 @@ TagManager:
   m_SortingLayers:
   - name: Default
     uniqueID: 0
+    locked: 0
+  - name: Above All
+    uniqueID: 1714448487
     locked: 0
