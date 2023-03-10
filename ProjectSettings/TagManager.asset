@@ -9,6 +9,10 @@ TagManager:
   - Breakable
   - OBJ
 
+  - TimeChange Zone
+  - Door
+=======
+
   layers:
   - Default
   - TransparentFX
