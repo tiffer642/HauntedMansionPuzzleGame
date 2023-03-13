@@ -17,7 +17,7 @@ public class PressurePlate : MonoBehaviour
     private void OnTriggerStay2D(Collider2D collision)
     {
         //Open door
-        if(collision.gameObject.CompareTag("Player") || collision.gameObject.CompareTag("OBJ"))
+        if(collision.gameObject.CompareTag("Player") || collision.gameObject.CompareTag("OBJ") && Door.gameObject != null)
         {
             Door.GetComponent<Door>().Open();
 
@@ -29,7 +29,7 @@ public class PressurePlate : MonoBehaviour
     private void OnTriggerExit2D(Collider2D collision)
     {
         //Close door
-        if (collision.gameObject.CompareTag("Player") || collision.gameObject.CompareTag("OBJ"))
+        if (collision.gameObject.CompareTag("Player") || collision.gameObject.CompareTag("OBJ") && Door.gameObject != null)
         {
             if (Door.GetComponent<Door>().SR.sprite == Door.GetComponent<Door>().open && keepOpen == false)
             {
