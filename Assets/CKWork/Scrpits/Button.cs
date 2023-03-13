@@ -18,7 +18,11 @@ public class Button : MonoBehaviour
     void Start()
     {
         spriteRenderer = GetComponent<SpriteRenderer>();
-        doorController = door.GetComponent<DoorController>();
+        if (door != null)
+        {
+            doorController = door.GetComponent<DoorController>();
+        }
+            
     }
 
     // Update is called once per frame
@@ -35,14 +39,22 @@ public class Button : MonoBehaviour
                 spriteRenderer.flipX = false;
             }
 
-            if (doorController.isOpen)
+            if(door != null)
             {
-                doorController.CloseDoor();
+                if (doorController.isOpen)
+                {
+                    doorController.CloseDoor();
+                }
+                else
+                {
+                    doorController.OpenDoor();
+                }
             }
-            else
-            {
-                doorController.OpenDoor();
-            }
+
+
+            SpawnBreaker();
+
+
         }
         
    
@@ -65,6 +77,22 @@ public class Button : MonoBehaviour
         }
 
     }
+
+    //spawn object to destroy breakable obj
+
+    public GameObject breakerSpawn;
+    public GameObject breakerOBJ;
     
+    public void SpawnBreaker()
+    {
+        if(breakerSpawn != null)
+        {
+            Instantiate(breakerOBJ, breakerSpawn.transform.position, breakerOBJ.transform.rotation);
+            breakerSpawn = null;
+        }
+    }
+
+
+
 
 }
