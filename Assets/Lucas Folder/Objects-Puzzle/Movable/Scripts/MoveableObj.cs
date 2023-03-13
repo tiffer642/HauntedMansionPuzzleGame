@@ -44,6 +44,10 @@ public class MoveableObj : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if(Player == null)
+        {
+            Player = GameObject.Find("Player");
+        }
         //Change Sprite From Scene
         if(SceneManager.GetActiveScene().name == "Past" && SR.sprite != Past)
         {
