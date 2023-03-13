@@ -20,6 +20,10 @@ public class PlayerTopDown : MonoBehaviour
 
     public float runSpeed = 5f;
 
+    public bool canEnterElevator = false;
+    public Transform elevatorPos;
+    public bool inElevator = false;
+
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
@@ -62,6 +66,19 @@ public class PlayerTopDown : MonoBehaviour
 
         an.SetFloat("HorizontalSpeed", Mathf.Abs(horizontal));
         an.SetFloat("VerticalSpeed", vertical);
+
+        if (canEnterElevator == true)
+        {
+            if(Input.GetKeyDown(KeyCode.E))
+            {
+                GetComponent<BoxCollider2D>().enabled = false;
+                inElevator = true;
+                transform.SetParent(elevatorPos);
+                transform.position = elevatorPos.position;
+                elevatorPos.gameObject.GetComponent<ElevatorController>().CloseElevator();
+                HidePlayer();
+            }
+        }
     }
 
     void FixedUpdate()
@@ -80,5 +97,40 @@ public class PlayerTopDown : MonoBehaviour
     {
         As.Stop();
         As.PlayOneShot(walkS);
+    }
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if(collision.gameObject.CompareTag("Elevator"))
+        {
+            collision.gameObject.GetComponent<ElevatorController>().OpenElevator();
+            canEnterElevator = true;
+            elevatorPos = collision.gameObject.transform;
+        }
+    }
+
+    private void OnTriggerExit2D(Collider2D collision)
+    {
+        if (collision.gameObject.CompareTag("Elevator"))
+        {
+            collision.gameObject.GetComponent<ElevatorController>().CloseElevator();
+            canEnterElevator = false;
+        }
+    }
+
+    public void HidePlayer()
+    {
+        if(inElevator == true)
+        {
+            sr.sortingOrder = -100;
+        }
+    }
+
+    public void ShowPlayer()
+    {
+        if (inElevator == true)
+        {
+            sr.sortingOrder = 2;
+        }
     }
 }
