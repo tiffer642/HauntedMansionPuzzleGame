@@ -8,7 +8,7 @@ public class PressurePlate : MonoBehaviour
     public GameObject Door;
 
 
-
+    public bool keepOpen = false;
 
 
 
@@ -20,6 +20,8 @@ public class PressurePlate : MonoBehaviour
         if(collision.gameObject.CompareTag("Player") || collision.gameObject.CompareTag("OBJ"))
         {
             Door.GetComponent<Door>().Open();
+
+
         }
         
     }
@@ -29,7 +31,7 @@ public class PressurePlate : MonoBehaviour
         //Close door
         if (collision.gameObject.CompareTag("Player") || collision.gameObject.CompareTag("OBJ"))
         {
-            if (Door.GetComponent<Door>().SR.sprite == Door.GetComponent<Door>().open)
+            if (Door.GetComponent<Door>().SR.sprite == Door.GetComponent<Door>().open && keepOpen == false)
             {
                 Door.GetComponent<Door>().Close();
             }

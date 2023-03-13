@@ -2,59 +2,46 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using TMPro;
 
 
 public class TimeChangePopUp : MonoBehaviour
 {
-    private GameObject InteractPopup;
 
 
-    private ScenesManager SCM;
+    public ScenesManager SM;
 
 
     // Start is called before the first frame update
     void Start()
     {
-        InteractPopup = GameObject.Find("Interact Popup");
-        SCM = GameObject.Find("Scene Manager").GetComponent<ScenesManager>();
+        SM = GameObject.Find("Scene Manager").GetComponent<ScenesManager>();
     }
 
     // Update is called once per frame
     void Update()
     {
-        
+       
     }
 
 
 
-    private void OnTriggerStay2D(Collider2D collision)
+    private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.gameObject.CompareTag("Player"))
         {
-            InteractPopup.SetActive(true);
+            SM.IntPopup(true);
         }
-        else
-        {
-            if(InteractPopup.activeSelf == true)
-            {
-                InteractPopup.SetActive(true);
-            }
-
-        }
-
-
-        if (collision.gameObject.CompareTag("Player") && InteractPopup.activeSelf == true)
-        {
-            if (Input.GetKey(KeyCode.E) && SceneManager.GetActiveScene().name != "Past")
-            {
-                SCM.LoadPast();
-            }
-            else if(Input.GetKey(KeyCode.E) && SceneManager.GetActiveScene().name != "Future")
-            {
-                SCM.LoadFuture();
-            }
-        }
-
     }
+
+
+    private void OnTriggerExit2D(Collider2D collision)
+    {
+        if (collision.gameObject.CompareTag("Player"))
+        {
+            SM.IntPopup(false);
+        }
+    }
+
 
 }
